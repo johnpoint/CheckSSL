@@ -21,8 +21,7 @@
                         x-bind:class="{'green':item.statuscolor=='success','red':item.statuscolor=='error','yellow':item.statuscolor=='warning'}"
                         style="height: 210px;">
                         <div class="card-content black-text">
-                            
-                            <span class="card-title" x-text="item.domain"></span> <span x-text="item.status"></span>
+                            <span class="card-title" x-text="item.domain"></span>
                             <p><span>Subject: </span><span x-text="item.subject"></span></p>
                             <p><span>Start: </span><span
                                     x-text="new Date(Date.parse(item.start)).Format('yyyy-MM-dd hh:mm:ss')"></span></p>
