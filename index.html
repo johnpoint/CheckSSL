@@ -13,7 +13,7 @@
 
 <body x-cloak x-data="index()">
     <div class="container">
-        <h1 class="row">SSL Status</h1>
+        <h1 class="row">SSL Status <span style="font-size: large;" x-text="new Date(Date.parse(updateTime)).Format('yyyy-MM-dd hh:mm:ss')"></span></h1>
         <div class="row">
             <template x-for="(item, index) in data" :key="index">
                 <div class="col s12 m12 xl4">
@@ -21,8 +21,8 @@
                         x-bind:class="{'green':item.statuscolor=='success','red':item.statuscolor=='error','yellow':item.statuscolor=='warning'}"
                         style="height: 210px;">
                         <div class="card-content black-text">
-                            <span x-text="item.status" style="float: right;"></span>
-                            <span class="card-title" x-text="item.domain"></span>
+                            
+                            <span class="card-title" x-text="item.domain"></span> <span x-text="item.status"></span>
                             <p><span>Subject: </span><span x-text="item.subject"></span></p>
                             <p><span>Start: </span><span
                                     x-text="new Date(Date.parse(item.start)).Format('yyyy-MM-dd hh:mm:ss')"></span></p>

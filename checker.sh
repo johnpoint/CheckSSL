@@ -7,7 +7,8 @@ do
     ./runcheck.sh ${i}
 done
 
-echo 'var data = [' > ./tmp/api/ct.js
+echo "var updateTime='$(echo $(date '+%Y-%m-%d %H:%M:%S'))';" >  ./tmp/api/ct.js
+echo 'var data = [' >> ./tmp/api/ct.js
 
 for i in $@
 do
